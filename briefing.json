@@ -1,0 +1,60 @@
+{
+  "slug": "fly-ai",
+  "nome": "Fly AI",
+  "proposito": "institucional",
+  "publico": "Empresários brasileiros",
+  "tom": "Corporativo direto — resultado com número e prazo, sem enrolação",
+  "headline_hero": "Empreendedor, desenvolvemos seu sistema!",
+  "subline_hero": "Criamos sites, aplicativos e sistemas sob medida — e implementamos IA na sua operação.",
+  "cta_principal": "Falar com especialista",
+  "tagline_marca": "Do sistema ao agente. Tudo sob medida.",
+  "logo": "Ícone raio/spark branco em fundo preto",
+  "paleta": {
+    "base": "#000000",
+    "superficie": "#171717",
+    "secundaria": "#525252",
+    "muted": "#A3A3A3",
+    "borda": "#E5E5E5",
+    "bg_claro": "#F0EEE9",
+    "branco": "#FFFFFF",
+    "accent": "monocromatico_puro"
+  },
+  "tipografia": {
+    "display": "Inter Black 900, -4% letter-spacing",
+    "heading": "Inter Black 900, -3% letter-spacing",
+    "body": "Inter Regular 400",
+    "label": "Inter Bold 700, uppercase, 200ls"
+  },
+  "matrix": {
+    "primary": "tech-apple",
+    "secondary": "portfolio-editorial",
+    "proporcao": "80/20"
+  },
+  "visualRefs": [
+    "https://borderlessdev.com/",
+    "https://academypass.ai/"
+  ],
+  "secoes": [
+    "hero",
+    "problema",
+    "servicos",
+    "como-funciona",
+    "resultados",
+    "cta-final",
+    "footer"
+  ],
+  "servicos": [
+    { "num": "01", "titulo": "Criação de Sites", "desc": "Sites institucionais, landing pages e portais com design profissional" },
+    { "num": "02", "titulo": "Criação de Aplicativos", "desc": "Web apps e mobile sob medida, da ideia ao lançamento" },
+    { "num": "03", "titulo": "Desenvolvimento de Sistemas", "desc": "Plataformas, APIs e SaaS com IA integrada desde o início" },
+    { "num": "04", "titulo": "Agentes de IA", "desc": "Atendimento automatizado, bots e agentes autônomos para sua operação" },
+    { "num": "05", "titulo": "Automação de Processos", "desc": "Workflows, integrações e eliminação de tarefas repetitivas" }
+  ],
+  "como_funciona": [
+    { "num": "01", "titulo": "Preencha o formulário", "desc": "Conta sobre seu projeto. Em até 12 horas um especialista entra em contato." },
+    { "num": "02", "titulo": "Receba uma proposta", "desc": "Analisamos sua necessidade e entregamos uma proposta com prazo e custo real." },
+    { "num": "03", "titulo": "Início do projeto", "desc": "Desenvolvimento começa com acompanhamento contínuo até a entrega." }
+  ],
+  "api_geracao": "freepik",
+  "modo_geracao": "api"
+}
