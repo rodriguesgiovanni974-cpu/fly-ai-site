@@ -1482,7 +1482,7 @@
   });
 
   /* ── Form → WhatsApp ── */
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     var nome    = document.getElementById('f-nome').value.trim();
     var tel     = document.getElementById('f-tel').value.trim();
@@ -1497,16 +1497,32 @@
       return;
     }
 
-    var msg = 'Olá! Vim pelo site da Fly.AI.\n\n'
-      + '*Nome:* ' + nome + '\n'
-      + '*Telefone:* ' + tel + '\n'
-      + '*Tipo de projeto:* ' + tipo + '\n'
-      + '*Projeto para:* ' + para + '\n'
-      + '*Urgência:* ' + urgente + '\n'
-      + '*Investimento:* ' + budget
-      + (obs ? '\n*Sobre o projeto:* ' + obs : '');
+    var btn = this.querySelector('.btn-submit');
+    btn.textContent = 'ENVIANDO...';
+    btn.disabled = true;
 
-    window.open('https://wa.me/5515996192574?text=' + encodeURIComponent(msg), '_blank');
+    try {
+      var res = await fetch('https://umvmhnjprvztjcaiataw.supabase.co/rest/v1/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'apikey': 'sb_publishable_D9104NSydt9zW3QJtT_TgA_C51x6rLm',
+          'Authorization': 'Bearer sb_publishable_D9104NSydt9zW3QJtT_TgA_C51x6rLm',
+          'Prefer': 'return=minimal'
+        },
+        body: JSON.stringify({ nome: nome, telefone: tel, tipo: tipo, para: para, urgencia: urgente, budget: budget, obs: obs || null })
+      });
+
+      if (res.ok) {
+        this.innerHTML = '<p style="text-align:center;color:#F0EEE9;font-size:18px;padding:32px 0;">✅ Mensagem enviada!<br><span style="font-size:14px;opacity:0.6;">Entraremos em contato em breve.</span></p>';
+      } else {
+        throw new Error('Erro ao enviar');
+      }
+    } catch (err) {
+      btn.textContent = 'ENVIAR FORMULÁRIO';
+      btn.disabled = false;
+      alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+    }
   });
 </script>
 </body>
